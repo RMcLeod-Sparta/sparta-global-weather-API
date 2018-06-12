@@ -1,4 +1,4 @@
-require_relative 'city_info.rb'
+require_relative 'city_info'
 require_relative 'random_id_generator'
 
 class WeatherMapInfo
