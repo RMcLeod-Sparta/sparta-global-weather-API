@@ -33,11 +33,11 @@ describe WeatherMapInfo do
   end
 
   it 'should have a cat code of 200' do
-    pending
+    expect(@city_methods.get_cat_code).to eq 200
   end
 
   it 'should have a weather hash' do
-    pending
+    expect(@city_methods.get_weather_data_type).to be_kind_of Hash
   end
 
   it 'should have a main hash' do

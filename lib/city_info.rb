@@ -23,5 +23,13 @@ class SingleCityWeatherInfo
     @single_city_data['coord']['lat']
   end
 
+  def get_cat_code
+    @single_city_data['cod']
+  end
+
+  def get_weather_data_type
+    @single_city_data['weather'].class
+  end
+
 
 end
