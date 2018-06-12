@@ -16,12 +16,25 @@ describe WeatherMapInfo do
     expect(@random_id.get_id_length).to be_between(5, 7).inclusive
   end
 
-  it 'should return a hash' do
+  it 'should have the data for the citys weather in a hash' do
     expect(@random_city).to be_kind_of Hash
   end
 
   it 'should have a coordinates hash' do
     expect(@city_methods.get_coord).to be_kind_of Hash
   end
+
+  it 'should have longitude float value' do
+    expect(@city_methods.get_coord_lon).to be_kind_of Float
+  end
+
+  it 'should have latitude float value' do
+    expect(@city_methods.get_coord_lat).to be_kind_of Float
+  end
+
+
+
+
+
 
 end

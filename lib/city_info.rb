@@ -12,7 +12,15 @@ class SingleCityWeatherInfo
   end
 
   def get_coord
-    @single_city_data["coord"]
+    @single_city_data['coord']
+  end
+
+  def get_coord_lon
+    @single_city_data['coord']['lon']
+  end
+
+  def get_coord_lat
+    @single_city_data['coord']['lat']
   end
 
 
