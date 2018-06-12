@@ -36,12 +36,12 @@ describe WeatherMapInfo do
     expect(@city_methods.get_cat_code).to eq 200
   end
 
-  it 'should have a weather hash' do
-    expect(@city_methods.get_weather_data_type).to be_kind_of Hash
+  it 'should have a weather array' do
+    expect(@city_methods.get_weather).to be_kind_of Array
   end
 
   it 'should have a main hash' do
-    pending
+    expect(@city_methods.get_main_info).to be_kind_of Hash
   end
 
   it 'should have a name that is a string' do

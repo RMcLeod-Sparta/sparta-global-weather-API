@@ -27,8 +27,12 @@ class SingleCityWeatherInfo
     @single_city_data['cod']
   end
 
-  def get_weather_data_type
-    @single_city_data['weather'].class
+  def get_weather
+    @single_city_data['weather']
+  end
+
+  def get_main_info
+    @single_city_data['main']
   end
 
 
