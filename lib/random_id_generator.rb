@@ -13,7 +13,7 @@ class RandomIdGenerator
   end
 
   def get_id_length
-    @randomCityId.length
+    @randomCityId.to_s.length
   end
 
 end
