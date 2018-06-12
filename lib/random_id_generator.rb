@@ -1,15 +1,19 @@
 require 'httparty'
 require 'json'
-require 'yaml'
 
 class RandomIdGenerator
+  include HTTParty
 
   def get_all_ids
-    YAML.load_file('lib/resources/city_id.yml')
+    @allCityIds = YAML.load_file('lib/resources/city_id.yml')
   end
 
   def get_rand_id
-    YAML.load_file('lib/resources/city_id.yml').sample
+    @randomCityId = YAML.load_file('lib/resources/city_id.yml').sample
+  end
+
+  def get_id_length
+    @randomCityId.length
   end
 
 end

@@ -12,8 +12,7 @@ class WeatherMapInfo
   end
 
 end
-
-stuff = WeatherMapInfo.new
-
-things = stuff.get_id.get_rand_id
-p stuff.get_city_info.get_single_city(things)
+# stuff = WeatherMapInfo.new
+#
+# things = stuff.get_id.get_rand_id
+# p stuff.get_city_info.get_single_city(things)
