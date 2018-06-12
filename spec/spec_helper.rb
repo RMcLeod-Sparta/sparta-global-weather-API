@@ -1,5 +1,5 @@
 require 'rspec'
-# require_relative '../lib/Postcodesio'
+require_relative '../lib/weather_service'
 
 RSpec.configure do |config|
   config.color = true
