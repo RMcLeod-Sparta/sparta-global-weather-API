@@ -60,14 +60,14 @@ describe WeatherMapInfo do
     expect(@city_methods.get_temp).to be_kind_of Float
   end
 
-  it 'should have a sea level that is a float' do
-    # expect(@city_methods.get_sea_level).to be_kind_of Float
-    pending
-  end
-
-  it 'should have a wind speed that is a float' do
-    expect(@city_methods.get_wind_speed).to be_kind_of Float
-  end
+  # it 'should have a sea level that is a float' do
+  #   expect(@city_methods.get_sea_level).to be_kind_of Float
+  #   pending
+  # end
+  #
+  # it 'should have a wind speed that is a float' do
+  #   expect(@city_methods.get_wind_speed).to be_kind_of Float
+  # end
 
   it 'should have a all clouds value that is a integer' do
     expect(@city_methods.get_clouds_all).to be_kind_of Integer
