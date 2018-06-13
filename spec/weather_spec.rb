@@ -16,7 +16,7 @@ describe WeatherMapInfo do
     expect(@random_id.get_id_length).to be_between(5, 7).inclusive
   end
 
-  it 'should have the data for the citys in a hash' do
+  it 'should have the data for the cities in a hash' do
     expect(@random_city).to be_kind_of Hash
   end
 
@@ -45,11 +45,11 @@ describe WeatherMapInfo do
   end
 
   it 'should have a name that is a string' do
-    pending
+    expect(@city_methods.get_name).to be_kind_of String
   end
 
   it 'should have a description that is a string' do
-    pending
+    expect(@city_methods.get_description).to be_kind_of String
   end
 
   it 'should have the id for 708546 be for the city of Holubynka' do

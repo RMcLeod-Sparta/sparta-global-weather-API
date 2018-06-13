@@ -35,5 +35,13 @@ class SingleCityWeatherInfo
     @single_city_data['main']
   end
 
+  def get_name
+    @single_city_data['name']
+  end
+
+  def get_description
+    @single_city_data['weather'][['description']]
+  end
+
 
 end
