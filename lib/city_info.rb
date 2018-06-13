@@ -59,5 +59,13 @@ class SingleCityWeatherInfo
     @single_city_data['wind']['speed']
   end
 
+  def get_clouds_all
+    @single_city_data['clouds']['all']
+  end
+
+  def get_country_letters
+    @single_city_data['sys']['country'].length
+  end
+
 
 end

@@ -70,11 +70,11 @@ describe WeatherMapInfo do
   end
 
   it 'should have a all clouds value that is a integer' do
-    pending
+    expect(@city_methods.get_clouds_all).to be_kind_of Integer
   end
 
   it 'should have two letters represent what country the city is in' do
-    pending
+    expect(@city_methods.get_country_letters).to eq 2
   end
 
   it 'should have 22634 different locations from which to draw from' do
