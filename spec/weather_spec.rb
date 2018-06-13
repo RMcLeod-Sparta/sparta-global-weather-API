@@ -53,7 +53,7 @@ describe WeatherMapInfo do
   end
 
   it 'should have the id for 708546 be for the city of Holubynka' do
-    pending
+    expect(@city_methods.get_708546).to eq 'Holubynka'
   end
 
   it 'should have a temperature that is a float' do
