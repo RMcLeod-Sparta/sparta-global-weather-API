@@ -5,11 +5,10 @@ describe WeatherMapInfo do
   before(:all) do
     @random_id = WeatherMapInfo.new.get_id
     @city_methods = WeatherMapInfo.new.get_city_info
-    @random_city = @city_methods.get_single_city(@random_id.get_rand_id)
   end
 
   it 'should have and id that is an integer' do
-    expect(@random_id.get_rand_id).to be_kind_of Integer
+    expect(@random_id.get_rand_id).to be_kind_of(Float).or be_kind_of(Integer)
   end
 
   it 'should have an id that is between 5 and 7 charecters long' do
@@ -17,7 +16,7 @@ describe WeatherMapInfo do
   end
 
   it 'should have the data for the cities in a hash' do
-    expect(@random_city).to be_kind_of Hash
+    expect(@city_methods.get_single_city(@random_id.get_rand_id)).to be_kind_of Hash
   end
 
   it 'should have a coordinates hash' do
@@ -60,21 +59,21 @@ describe WeatherMapInfo do
     expect(@city_methods.get_temp).to be_kind_of Float
   end
 
-  # it 'should have a sea level that is a float' do
-  #   expect(@city_methods.get_sea_level).to be_kind_of Float
-  #   pending
-  # end
-  #
-  # it 'should have a wind speed that is a float' do
-  #   expect(@city_methods.get_wind_speed).to be_kind_of Float
-  # end
+  it 'should have a sea level that is a float' do
+    expect(@city_methods.get_sea_level).to be_kind_of(Float).or be_kind_of(Integer).or be nil
+  end
+
+  it 'should have a wind speed that is a float' do
+    expect(@city_methods.get_wind_speed).to be_kind_of(Float).or be_kind_of(Integer)
+  end
 
   it 'should have a all clouds value that is a integer' do
     expect(@city_methods.get_clouds_all).to be_kind_of Integer
   end
 
   it 'should have two letters represent what country the city is in' do
-    expect(@city_methods.get_country_letters).to eq 2
+    expect(@city_methods.get_country_length).to eq 2
+    expect(@city_methods.get_country_letters).to be_kind_of String
   end
 
   it 'should have 22634 different locations from which to draw from' do
