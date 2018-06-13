@@ -55,5 +55,9 @@ class SingleCityWeatherInfo
     @single_city_data['main']['sea_level']
   end
 
+  def get_wind_speed
+    @single_city_data['wind']['speed']
+  end
+
 
 end
