@@ -8,6 +8,10 @@ class RandomIdGenerator
     @allCityIds = YAML.load_file('lib/resources/city_id.yml')
   end
 
+  def get_number_ids
+    YAML.load_file('lib/resources/city_id.yml').length
+  end
+
   def get_rand_id
     @randomCityId = YAML.load_file('lib/resources/city_id.yml').sample
   end

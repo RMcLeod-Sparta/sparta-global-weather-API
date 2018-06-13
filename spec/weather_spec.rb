@@ -77,7 +77,7 @@ describe WeatherMapInfo do
   end
 
   it 'should have 22634 different locations from which to draw from' do
-    pending
+    expect(@random_id.get_number_ids).to eq 22634
   end
 
 
