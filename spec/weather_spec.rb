@@ -57,11 +57,11 @@ describe WeatherMapInfo do
   end
 
   it 'should have a temperature that is a float' do
-    pending
+    expect(@city_methods.get_temp).to be_kind_of Float
   end
 
   it 'should have a sea level that is a float' do
-    pending
+    expect(@city_methods.get_sea_level).to be_kind_of Float
   end
 
   it 'should have a wind speed that is a float' do

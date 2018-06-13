@@ -44,7 +44,15 @@ class SingleCityWeatherInfo
   end
 
   def get_708546
-    @single_city_data = JSON.parse(self.class.get("/weather?id=708546&appid=67ee1f4684f3bd86406f16e274ad06b3").body)['name']
+    JSON.parse(self.class.get("/weather?id=708546&appid=67ee1f4684f3bd86406f16e274ad06b3").body)['name']
+  end
+
+  def get_temp
+    @single_city_data['main']['temp']
+  end
+
+  def get_sea_level
+    @single_city_data['main']['sea_level']
   end
 
 
