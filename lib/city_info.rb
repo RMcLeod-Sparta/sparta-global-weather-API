@@ -40,7 +40,7 @@ class SingleCityWeatherInfo
   end
 
   def get_description
-    @single_city_data['weather'][['description']]
+    @single_city_data['weather'][0]['description']
   end
 
 
